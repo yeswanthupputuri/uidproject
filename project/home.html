@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>HOME</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script type="text/javascript">
+        function validate()
+        {
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+
+            if (email.value == "" )
+            {
+                alert("email is required");
+                return false ;
+            }
+            else if (! (email.value.match(mailformat)) )
+            {
+                 alert("email is not valid");
+                 return false ;
+            }
+            <!-- password validation -->
+            else if ( password.value == "" )
+            {
+                alert ("password is required");
+                return false ;
+            }
+
+            else if ( password.value.length < 6  )
+            {
+                alert ("password must be at least 6 characters ");
+                return false ;
+            }
+             else if ( ! password.value.match(decimal))
+             {
+                 alert ("password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character. ");
+                 return false ;
+             }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="main">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://nestaway-assets.nestaway.com/refonte/precompiled-assets/src/assets/images/common/nestawayLogo-eb150adf041954443b4ff9fcb97dad98.svg">
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="properties.html">PROPERTIES</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">AGENTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
+            </div>
+            <div class="search">
+                <input class="srch" type="search" placeholder="search location">
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+
+
+        </div>
+
+        <div class="content">
+            <h1>EXCELLENT SPACE FOR <br><span>YOUR NEXT HOME</span></h1>
+            <P class="par">
+                Everything You Need. All Right Here.
+            </P>
+
+            <button class="cn"><a href="#">join us</a></button>
+
+            <form class="form" onsubmit=" return validate()" >
+                <h2>login here</h2>
+                <input type="email" name="email" id="email" placeholder="Enter your email address">
+                <input type="password" name="password" id="password" placeholder="Enter your password">
+                <button class="btnn" ><a href="#">login</a></button>
+
+                <p class="link">Don't have an account<br>
+                    <a href="#">Sign Up </a>here</p>
+                <p class="liw">login in with</p>
+
+                <div class="icon">
+                    <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+                        <img src="https://img.icons8.com/bubbles/50/000000/google-logo.png" class="img" /></a>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+    <section class="designfor">
+        <div class="content">
+            <h1 class="content-header">designed for </h1>
+            <div class="families">
+                <img src="https://nestaway-assets.nestaway.com/refonte/precompiled-assets/src/assets/images/common/grouped/groupFamily-3a4cdb1cc95d3f004d6cc36f209c8403.png">
+                <h3>Home for families</h3>
+                <p class="families-p">
+                    Rent a beautiful house for<br> your family. Choose from<br> flats in societies, individual <br>apartments, bungalows & villas
+                </p>
+                <button class="cn"><a href="#">Explore</a></button>
+
+            </div>
+            <div class="students">
+                <img src="https://nestaway-assets.nestaway.com/refonte/precompiled-assets/src/assets/images/common/grouped/groupFriends-de315f1cc67cfabe13b2d56a2f405b21.png">
+                <h3>Home for friends</h3>
+                <p class="students-p">
+                    Rent a beautiful bachelor friendly <br>house with your friends.Choose <br>from flats in societies, individual <br>apartments, bungalows & villas.
+                </p>
+                <button class="cn"><a href="#">Explore</a></button>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="https://nestaway-assets.nestaway.com/refonte/precompiled-assets/src/assets/images/common/nestawayIcon-69fd89629dc0272cc6300959e02fdcd3.svg">
+            <p class="description">
+                NestAway is India's fastest growing "Managed Home<br> Rental Network" attempting to provide better rental<br> apartments solutions via design & technology.<br><br> We help find, book rental homes of choice across <br> Indian cities. We
+                assist with move-in, provide home <br> maintenance services from cleaning, damages to rent<br><br> payment & even move-out. <br>Whatever be your budget, whatever you may call a <br> home (a bed, a room or an entire house), we have <br>                something for you!
+            </p>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-middle">
+            <h2>For owners & tenents</h2><br>
+            <a href="https://www.nestaway.com/list-your-property">List your property</a><br>
+            <a href="https://www.nestaway.com/welcome/owner/search">Rent predictor</a><br>
+            <a href="https://www.nestaway.com/refer-house-owner">Rent an owner</a><br>
+            <a href="https://www.nestaway.com/refer-house-tenet">Rent an tenent</a><br>
+            <a href="https://www.nestaway.com/refer-house-owner">coupon codes</a><br>
+            <a href="https://www.nestaway.com/refer-house-owner">Top socities</a><br>
+        </div>
+        <div class="footer-right">
+            <h2>More information</h2><br>
+            <a href="https://www.nestaway.com/help-center">Help center</a><br>
+            <a href="https://www.nestaway.com/help-center/q/privacy-policy/5159">Privacy Policy</a><br>
+            <a href="ww.nestaway.com/help-center/q/terms-of-use/5242">Terms of use</a><br>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
